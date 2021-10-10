@@ -1,0 +1,12 @@
+<script>
+
+console.log("loading wasm :)");
+
+let wobj
+WebAssembly.instantiateStreaming(fetch('wasm-8.wasm'))
+  .then(obj => {
+    console.log("loaded wasm :o")
+    wobj = obj
+  });
+</script>
+
